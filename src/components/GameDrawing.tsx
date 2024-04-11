@@ -1,3 +1,5 @@
+import React from 'react';
+
 const HEAD = (
     <div className="head"></div>
 )
@@ -22,16 +24,16 @@ const LEFT_LEG = (
     <div className="left-leg"></div>
 )
 
+const BODY_PARTS = [HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG]
 
-export function GameDrawing() {
+type GameDrawingProps = {
+    numberOfGuessedLetters: number;
+}
+
+export function GameDrawing({ numberOfGuessedLetters }: GameDrawingProps) {
     return (
         <div style={{ position: "relative" }}>
-            {HEAD}
-            {BODY}
-            {RIGHT_ARM}
-            {LEFT_ARM}
-            {RIGHT_LEG}
-            {LEFT_LEG}
+            {BODY_PARTS.slice(0, numberOfGuessedLetters).map((part, index) => React.cloneElement(part, { key: index }))}
             <div className="small-vertical" />
             <div className="top-horizontal" />
             <div className="big-vertical" />
