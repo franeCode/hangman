@@ -110,3 +110,20 @@
   transform: rotate(-30deg);
   transform-origin: right top;
 }
+
+/* Words */
+
+.words {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  font-size: 6em;
+  text-transform: uppercase;
+  gap: 0.3em;
+}
+
+.letters {
+  border-bottom: 0.1em solid black;
+  color: white;
+}
