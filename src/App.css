@@ -45,6 +45,7 @@
   top: 0;
   right: 0;
 }
+
 /* Body parts */
 
 .head {
@@ -126,4 +127,17 @@
 .letters {
   border-bottom: 0.1em solid black;
   color: white;
+}
+
+/* Keyboard */
+
+.keyboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(3rem, 1fr));
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.keyboard-key {
+  display: inline-block;
 }
