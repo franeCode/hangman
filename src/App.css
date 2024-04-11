@@ -1,0 +1,76 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.message {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.head {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  border: 1rem solid black;
+  position: absolute;
+  top: 3rem;
+  right: -2.5rem;
+}
+
+.body {
+  width: 1rem;
+  height: 6.5rem;
+  background-color: black;
+  position: absolute;
+  top: 8rem;
+  right: 0;
+}
+
+.right-arm {
+  width: 5rem;
+  height: 1rem;
+  background-color: black;
+  position: absolute;
+  top: 8rem;
+  right: -5rem;
+  transform: rotate(-30deg);
+  transform-origin: left bottom;
+}
+
+
+.left-arm {
+  width: 5rem;
+  height: 1rem;
+  background-color: black;
+  position: absolute;
+  top: 8rem;
+  right: 0;
+  transform: rotate(30deg);
+  transform-origin: right bottom;
+}
+
+.right-leg {
+  width: 1rem;
+  height: 4rem;
+  background-color: black;
+  position: absolute;
+  top: 14.5rem;
+  right: -1rem;
+  transform: rotate(-30deg);
+  transform-origin: left top;
+}
+
+.left-leg {
+  width: 1rem;
+  height: 4rem;
+  background-color: black;
+  position: absolute;
+  top: 14.5rem;
+  right: 0;
+  transform: rotate(30deg);
+  transform-origin: right top;
+}
