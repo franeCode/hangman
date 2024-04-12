@@ -27,6 +27,7 @@ function App() {
     setLanguage(language);
     setGuessWord(getRandomWord(language));
     setAlphabet(language === 'german' ? 'abcdefghijklmnopqrstuvwxyzäöüß'.split('') : 'abcdefghijklmnopqrstuvwxyz'.split('')); 
+    setGuessedLetters([]);
   };
 
   const startNewGame = () => {
@@ -89,28 +90,31 @@ function App() {
   return (
     <>
       <div className='game-container'>
-        <GameHeader 
-          isLoser={isLoser} 
-          isWinner={isWinner} 
-          startNewGame={startNewGame}
-          language={language}
-          handleLanguageChange={handleLanguageChange}
+        <GameDrawing 
+          numberOfGuessedLetters={incorrectLetters.length} />
+        <div>
+          <GameHeader 
+            isLoser={isLoser} 
+            isWinner={isWinner} 
+            startNewGame={startNewGame}
+            language={language}
+            handleLanguageChange={handleLanguageChange}
+            />
+          <GameWords 
+            reveal={isLoser}
+            guessWord={guessWord}
+            guessedLetters={guessedLetters}
+          /> 
+          <GameKeyboard
+            disabled={isWinner || isLoser}
+            activeLetters={guessedLetters.filter(letter =>
+            guessWord.includes(letter)
+            )}
+            inactiveLetters={incorrectLetters}
+            addGuessedLetter={addGuessedLetter}
+            alphabet={alphabet}
           />
-        <GameDrawing numberOfGuessedLetters={incorrectLetters.length} />
-        <GameWords 
-          reveal={isLoser}
-          guessWord={guessWord}
-          guessedLetters={guessedLetters}
-         /> 
-        <GameKeyboard
-          disabled={isWinner || isLoser}
-          activeLetters={guessedLetters.filter(letter =>
-          guessWord.includes(letter)
-          )}
-          inactiveLetters={incorrectLetters}
-          addGuessedLetter={addGuessedLetter}
-          alphabet={alphabet}
-        />
+        </div>
       </div>
     </>
   )
