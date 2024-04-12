@@ -1,21 +1,37 @@
 import './App.css'
 import React, { useState, useCallback, useEffect } from 'react'
-import words from './common.json'
+import englishWords from './common.json'
+import germanWords from './german_words.json';
 import { GameDrawing } from './components/GameDrawing';
 import { GameWords } from './components/GameWords';
 import { GameKeyboard } from './components/GameKeyboard';
 
+const englishWordsArray: string[] = (englishWords as { commonWords: string[] }).commonWords;
+const germanWordsArray: string[] = germanWords as string[]; 
 
 function App() {
   
-  const commonWordsArray: string[] = words.commonWords;
-
-  const [guessWord, setGuessWord] = useState<string>(() => {
-    const randomIndex = Math.floor(Math.random() * commonWordsArray.length);
-    return commonWordsArray[randomIndex];
-  });
-
   const [guessedLetters, setGuessedLetters] = useState<string[]>([])
+  const [language, setLanguage] = useState<'english' | 'german'>('english');
+  const [guessWord, setGuessWord] = useState(getRandomWord(language));
+  const [alphabet, setAlphabet] = useState('abcdefghijklmnopqrstuvwxyz'.split(''));
+  
+  function getRandomWord(language: 'english' | 'german'): string {
+    const words = language === 'german' ? germanWordsArray : englishWordsArray;
+    return words[Math.floor(Math.random() * words.length)];
+  }
+
+  const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const language = event.target.value as 'english' | 'german';
+    setLanguage(language);
+    setGuessWord(getRandomWord(language));
+    setAlphabet(language === 'german' ? 'abcdefghijklmnopqrstuvwxyzäöüß'.split('') : 'abcdefghijklmnopqrstuvwxyz'.split('')); 
+  };
+
+  const startNewGame = () => {
+    setGuessWord(getRandomWord(language));
+    setGuessedLetters([]);
+  };
 
   const incorrectLetters = guessedLetters.filter(
     letter => !guessWord.includes(letter)
@@ -68,20 +84,19 @@ function App() {
     }
   }, [guessWord])
 
-  const startNewGame = () => {
-    setGuessWord(guessWord); // Set a new word to guess
-    setGuessedLetters([]); // Reset the guessed letters
-  };
-
 
   return (
     <>
       <div className='game-container'>
         <h1>Hangman</h1>
         <div className='message'>
-        {isWinner && "Winner! - Click to try again"}
-        {isLoser && "Nice Try - Click to try again"}
-        <button onClick={startNewGame}>Start New Game</button>
+          {isWinner && "Winner! - Click to try again"}
+          {isLoser && "Nice Try - Click to try again"}
+          <button onClick={startNewGame}>Start New Game</button>
+          <select value={language} onChange={handleLanguageChange}>
+            <option value="english">English</option>
+            <option value="german">German</option>
+          </select>
         </div>
         <GameDrawing numberOfGuessedLetters={incorrectLetters.length} />
         <GameWords 
@@ -96,7 +111,8 @@ function App() {
           )}
           inactiveLetters={incorrectLetters}
           addGuessedLetter={addGuessedLetter}
-           />
+          alphabet={alphabet}
+        />
       </div>
     </>
   )

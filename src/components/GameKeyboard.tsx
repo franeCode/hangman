@@ -3,10 +3,11 @@ type GameKeyboardProps = {
     inactiveLetters: string[]
     addGuessedLetter: (letter: string) => void
     disabled?: boolean
+    alphabet: string[]
 };
 
-export function GameKeyboard({ activeLetters, inactiveLetters, addGuessedLetter, disabled=false }: GameKeyboardProps) {
-  const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+export function GameKeyboard({ activeLetters, inactiveLetters, addGuessedLetter, disabled=false, alphabet }: GameKeyboardProps) {
+  // const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
   return (
     <div className='keyboard-container'>
       {alphabet.map((key) => {
