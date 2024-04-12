@@ -7,7 +7,6 @@ type GameKeyboardProps = {
 };
 
 export function GameKeyboard({ activeLetters, inactiveLetters, addGuessedLetter, disabled=false, alphabet }: GameKeyboardProps) {
-  // const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
   return (
     <div className='keyboard-container'>
       {alphabet.map((key) => {
