@@ -66,23 +66,33 @@ function App() {
     return () => {
       document.removeEventListener("keypress", handler)
     }
-  }, [])
+  }, [guessWord])
+
+  const startNewGame = () => {
+    setGuessWord(guessWord); // Set a new word to guess
+    setGuessedLetters([]); // Reset the guessed letters
+  };
 
 
   return (
     <>
       <div className='game-container'>
         <h1>Hangman</h1>
-        <div className='message'>Win/Lose</div>
+        <div className='message'>
+        {isWinner && "Winner! - Click to try again"}
+        {isLoser && "Nice Try - Click to try again"}
+        <button onClick={startNewGame}>Start New Game</button>
+        </div>
         <GameDrawing numberOfGuessedLetters={incorrectLetters.length} />
         <GameWords 
+          reveal={isLoser}
           guessWord={guessWord}
           guessedLetters={guessedLetters}
          /> 
         <GameKeyboard
-          // disabled={isWinner || isLoser}
-            activeLetters={guessedLetters.filter(letter =>
-            guessWord.includes(letter)
+          disabled={isWinner || isLoser}
+          activeLetters={guessedLetters.filter(letter =>
+          guessWord.includes(letter)
           )}
           inactiveLetters={incorrectLetters}
           addGuessedLetter={addGuessedLetter}
