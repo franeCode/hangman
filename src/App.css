@@ -129,6 +129,14 @@
   color: white;
 }
 
+.letters.correct {
+  color: black;
+}
+
+.letters.incorrect {
+  color: red;
+}
+
 /* Keyboard */
 
 .keyboard-container {
@@ -148,4 +156,18 @@
   font-weight: bold;
   font-size: 2.5rem;
   cursor: pointer;
+}
+
+.keyboard-key.active {
+  background-color: hsl(200, 100%, 50%);
+  color: white;
+}
+
+.keyboard-key.inactive {
+  opacity: .3;
+}
+
+.keyboard-key:hover:not(:disabled),
+.keyboard-key:focus:not(:disabled) {
+  background-color: hsl(200, 100%, 75%);
 }
