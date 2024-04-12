@@ -5,6 +5,7 @@ import germanWords from './german_words.json';
 import { GameDrawing } from './components/GameDrawing';
 import { GameWords } from './components/GameWords';
 import { GameKeyboard } from './components/GameKeyboard';
+import { GameHeader } from './components/GameHeader';
 
 const englishWordsArray: string[] = (englishWords as { commonWords: string[] }).commonWords;
 const germanWordsArray: string[] = germanWords as string[]; 
@@ -88,16 +89,13 @@ function App() {
   return (
     <>
       <div className='game-container'>
-        <h1>Hangman</h1>
-        <div className='message'>
-          {isWinner && "Winner! - Click to try again"}
-          {isLoser && "Nice Try - Click to try again"}
-          <button onClick={startNewGame}>Start New Game</button>
-          <select value={language} onChange={handleLanguageChange}>
-            <option value="english">English</option>
-            <option value="german">German</option>
-          </select>
-        </div>
+        <GameHeader 
+          isLoser={isLoser} 
+          isWinner={isWinner} 
+          startNewGame={startNewGame}
+          language={language}
+          handleLanguageChange={handleLanguageChange}
+          />
         <GameDrawing numberOfGuessedLetters={incorrectLetters.length} />
         <GameWords 
           reveal={isLoser}
