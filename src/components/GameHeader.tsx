@@ -1,3 +1,5 @@
+import logo from '../assets/img/logo.svg';
+
 type GameHeaderProps = {
     isWinner: boolean;
     isLoser: boolean;
@@ -8,16 +10,21 @@ type GameHeaderProps = {
 
 export function GameHeader({ isWinner, isLoser, startNewGame, language, handleLanguageChange}: GameHeaderProps) {
     return (
-        <div>
-            <h1>Hangman</h1>
+        <div className='navbar'>
+            <div className='logo'>
+                <h1>Hangman</h1>
+                <img src={logo} style={{ height: "3rem"}} alt="Hangman-logo" />
+            </div>
             <div className='message'>
-            {isWinner && "Winner! - Click to try again"}
-            {isLoser && "Nice Try - Click to try again"}
-            <button onClick={startNewGame}>Start New Game</button>
-            <select value={language} onChange={handleLanguageChange}>
-                <option value="english">English</option>
-                <option value="german">German</option>
-            </select>
+                {isWinner && "Winner! - Click to try again"}
+                {isLoser && "Nice Try - Click to try again"}
+            </div>
+            <button className='reset-game chalk-effect' onClick={startNewGame}>Start New Game</button>
+            <div>
+                <select className='languages chalk-effect' value={language} onChange={handleLanguageChange}>
+                    <option value="english">🇺🇸 English</option>
+                    <option value="german">🇩🇪 German</option>
+                </select>
             </div>
         </div>
     )

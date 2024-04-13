@@ -1,17 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Walter+Turncoat');
 
 body {
-  background: #3D3D3D; 
-  background: linear-gradient(90deg, #3D3D3D 10%, #29323c 90%);
+  background: #274C43; 
+  background: 
+    url('./assets/img/black-linen.png'),
+    linear-gradient(90deg, #274C43 10%, #274C43 90%);
   font-family: 'Walter Turncoat', cursive;
+  color: #ddd;
+  /* text-shadow: 0px 0px 1px #fff, 0px 0px 2px #fff, 0px 0px 3px #fff, 0px 0px 4px #fff, 0px 0px 5px #fff; */
 }
 
 .game-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .keyboard-container {
@@ -25,7 +31,7 @@ body {
 .drawing-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   width: 100%;
 }
 
@@ -38,7 +44,41 @@ body {
               0px 4px 1px rgba(255,255,255,0.4), 
               0px 5px 1px rgba(255,255,255,0.4), 
               0px 6px 1px rgba(255,255,255,0.4);
-  /* border-color: white; */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo {
+  position: relative;
+}
+
+.logo img {
+  position: absolute;
+  top: 3.5rem;
+  left: -1.3rem;
+}
+
+.languages {
+  padding: 0.5rem;
+  background-color: white;
+  border: none;
+  font-family: 'Walter Turncoat', cursive;
+  color: #274C43;
+}
+
+.reset-game {
+  padding: 0.5rem;
+  background-color: transparent;
+  border: 0.1rem solid white;
+  border-radius: 50%;
+  font-family: 'Walter Turncoat', cursive;
+  color: white;
+
 }
 
 /* Win / Lose message */
@@ -160,7 +200,7 @@ body {
 }
 
 .letters {
-  border-bottom: 0.1em solid black;
+  border-bottom: 0.1em solid white;
   color: white;
 }
 
@@ -176,8 +216,8 @@ body {
 
 .keyboard-key {
   display: inline-block;
-  border: 0.1rem solid black;
-  background-color: none;
+  border: 0.1rem solid rgb(144, 142, 142);
+  background-color: transparent;
   aspect-ratio: 1 / 1;
   text-transform: uppercase;
   padding: 0.5rem;

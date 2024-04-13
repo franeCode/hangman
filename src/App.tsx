@@ -89,19 +89,19 @@ function App() {
 
   return (
     <>
+      <GameHeader 
+        isLoser={isLoser} 
+        isWinner={isWinner} 
+        startNewGame={startNewGame}
+        language={language}
+        handleLanguageChange={handleLanguageChange}
+        />
       <div className='game-container'>
         <div className='drawing-container'>
           <GameDrawing 
             numberOfGuessedLetters={incorrectLetters.length} />
         </div>
         <div className='keyboard-container'>
-          <GameHeader 
-            isLoser={isLoser} 
-            isWinner={isWinner} 
-            startNewGame={startNewGame}
-            language={language}
-            handleLanguageChange={handleLanguageChange}
-            />
           <GameWords 
             reveal={isLoser}
             guessWord={guessWord}
