@@ -1,9 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Walter+Turncoat');
+
+body {
+  background: #3D3D3D; 
+  background: linear-gradient(90deg, #3D3D3D 10%, #29323c 90%);
+  font-family: 'Walter Turncoat', cursive;
+}
+
 .game-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   height: 100vh;
+}
+
+.keyboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.drawing-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Chalk Effect */
+.chalk-effect {
+  box-shadow: 0px 0px 2px rgba(255,255,255,0.4), 
+              0px 1px 1px rgba(255,255,255,0.4), 
+              0px 2px 1px rgba(255,255,255,0.4), 
+              0px 3px 1px rgba(255,255,255,0.4), 
+              0px 4px 1px rgba(255,255,255,0.4), 
+              0px 5px 1px rgba(255,255,255,0.4), 
+              0px 6px 1px rgba(255,255,255,0.4);
+  /* border-color: white; */
 }
 
 /* Win / Lose message */
@@ -20,27 +55,27 @@
 .bottom-horizontal {
   width: 15rem;
   height: 0.6rem;
-  background-color: black;
+  background-color: white;
 }
 
 .big-vertical {
   width: 0.6rem;
   height: 25rem;
-  background-color: black;
+  background-color: white;
   margin-left: 7.5rem;
 }
 
 .top-horizontal {
   width: 12rem;
   height: 0.6rem;
-  background-color: black;
+  background-color: white;
   margin-left: 7.5rem;
 }
 
 .small-vertical {
   width: 0.6rem;
   height: 3rem;
-  background-color: black;
+  background-color: white;
   position: absolute;
   top: 0;
   right: 0;
@@ -52,7 +87,7 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 100%;
-  border: 0.6rem solid black;
+  border: 0.6rem solid white;
   position: absolute;
   top: 3rem;
   right: -1.5rem;
@@ -61,7 +96,7 @@
 .body {
   width: 0.6rem;
   height: 7rem;
-  background-color: black;
+  background-color: white;
   position: absolute;
   top: 6.5rem;
   right: 0;
@@ -70,7 +105,7 @@
 .right-arm {
   width: 5.5rem;
   height: 0.6rem;
-  background-color: black;
+  background-color: white;
   position: absolute;
   top: 8rem;
   right: -5.5rem;
@@ -82,7 +117,7 @@
 .left-arm {
   width: 5.5rem;
   height: 0.6rem;
-  background-color: black;
+  background-color: white;
   position: absolute;
   top: 8rem;
   right: 0.6rem;
@@ -93,7 +128,7 @@
 .right-leg {
   width: 6rem;
   height: 0.6rem;
-  background-color: black;
+  background-color: white;
   position: absolute;
   top: 13rem;
   right: -5.7rem;
@@ -104,7 +139,7 @@
 .left-leg {
   width: 6rem;
   height: 0.6rem;
-  background-color: black;
+  background-color: white;
   position: absolute;
   top: 13rem;
   right: 0.5rem;
@@ -131,11 +166,11 @@
 
 /* Keyboard */
 
-.keyboard-container {
+.keyboard {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(3rem, 1fr));
   gap: 0.5rem;
-  width: 100%;
+  width: 75%;
   margin-top: 2rem;
 }
 
@@ -149,6 +184,7 @@
   font-weight: bold;
   font-size: 2rem;
   cursor: pointer;
+  font-family: 'Walter Turncoat', cursive;
 }
 
 .keyboard-key.active {

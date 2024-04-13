@@ -8,7 +8,7 @@ type GameKeyboardProps = {
 
 export function GameKeyboard({ activeLetters, inactiveLetters, addGuessedLetter, disabled=false, alphabet }: GameKeyboardProps) {
   return (
-    <div className='keyboard-container'>
+    <div className='keyboard'>
       {alphabet.map((key) => {
         const isActive = activeLetters.includes(key)
         const isInactive = inactiveLetters.includes(key)

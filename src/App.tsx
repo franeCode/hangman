@@ -1,6 +1,6 @@
 import './App.css'
 import React, { useState, useCallback, useEffect } from 'react'
-import englishWords from './common.json'
+import englishWords from './english_words.json'
 import germanWords from './german_words.json';
 import { GameDrawing } from './components/GameDrawing';
 import { GameWords } from './components/GameWords';
@@ -90,9 +90,11 @@ function App() {
   return (
     <>
       <div className='game-container'>
-        <GameDrawing 
-          numberOfGuessedLetters={incorrectLetters.length} />
-        <div>
+        <div className='drawing-container'>
+          <GameDrawing 
+            numberOfGuessedLetters={incorrectLetters.length} />
+        </div>
+        <div className='keyboard-container'>
           <GameHeader 
             isLoser={isLoser} 
             isWinner={isWinner} 

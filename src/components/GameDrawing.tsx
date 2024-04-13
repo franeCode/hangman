@@ -1,27 +1,27 @@
 import React from 'react';
 
 const HEAD = (
-    <div className="head"></div>
+    <div className="head chalk-effect"></div>
 )
 
 const BODY = (
-    <div className="body"></div>
+    <div className="body chalk-effect"></div>
 )
 
 const RIGHT_ARM = (
-    <div className="right-arm"></div>
+    <div className="right-arm chalk-effect"></div>
 )
 
 const LEFT_ARM = (
-    <div className="left-arm"></div>
+    <div className="left-arm chalk-effect"></div>
 )
 
 const RIGHT_LEG = (
-    <div className="right-leg"></div>
+    <div className="right-leg chalk-effect"></div>
 )
 
 const LEFT_LEG = (
-    <div className="left-leg"></div>
+    <div className="left-leg chalk-effect"></div>
 )
 
 const BODY_PARTS = [HEAD, BODY, RIGHT_ARM, LEFT_ARM, RIGHT_LEG, LEFT_LEG]
@@ -34,10 +34,10 @@ export function GameDrawing({ numberOfGuessedLetters }: GameDrawingProps) {
     return (
         <div style={{ position: "relative" }}>
             {BODY_PARTS.slice(0, numberOfGuessedLetters).map((part, index) => React.cloneElement(part, { key: index }))}
-            <div className="small-vertical" />
-            <div className="top-horizontal" />
-            <div className="big-vertical" />
-            <div className="bottom-horizontal" />
+            <div className="small-vertical chalk-effect" />
+            <div className="top-horizontal chalk-effect" />
+            <div className="big-vertical chalk-effect" />
+            <div className="bottom-horizontal chalk-effect" />
         </div>
     )
 }
