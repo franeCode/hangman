@@ -6,6 +6,7 @@ import { GameDrawing } from './components/GameDrawing';
 import { GameWords } from './components/GameWords';
 import { GameKeyboard } from './components/GameKeyboard';
 import { GameHeader } from './components/GameHeader';
+import { Footer } from './components/Footer';
 
 const englishWordsArray: string[] = (englishWords as { commonWords: string[] }).commonWords;
 const germanWordsArray: string[] = germanWords as string[]; 
@@ -117,6 +118,7 @@ function App() {
             alphabet={alphabet}
           />
         </div>
+        <Footer />
       </div>
     </>
   )
