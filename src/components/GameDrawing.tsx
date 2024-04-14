@@ -37,6 +37,7 @@ export function GameDrawing({ numberOfGuessedLetters }: GameDrawingProps) {
             <div className="small-vertical chalk-effect" />
             <div className="top-horizontal chalk-effect" />
             <div className="big-vertical chalk-effect" />
+            <div className='diagonal chalk-effect' />
             <div className="bottom-horizontal chalk-effect" />
         </div>
     )
