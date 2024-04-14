@@ -15,7 +15,7 @@ export function GameWords({ guessWord, guessedLetters, reveal=false }: GameWords
                   ? "visible"
                   : "hidden",
                   color:
-                    !guessedLetters.includes(letter) && reveal ? "red" : "black",
+                    !guessedLetters.includes(letter) && reveal ? "red" : "white",
                   }}
                 >
                 {letter}
