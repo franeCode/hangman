@@ -17,6 +17,7 @@ function App() {
   const [language, setLanguage] = useState<'english' | 'german'>('english');
   const [guessWord, setGuessWord] = useState(getRandomWord(language));
   const [alphabet, setAlphabet] = useState('abcdefghijklmnopqrstuvwxyz'.split(''));
+  const [displayMessage, setDisplayMessage] = useState<string>('');
   
   function getRandomWord(language: 'english' | 'german'): string {
     const words = language === 'german' ? germanWordsArray : englishWordsArray;
@@ -34,6 +35,7 @@ function App() {
   const startNewGame = () => {
     setGuessWord(getRandomWord(language));
     setGuessedLetters([]);
+    setDisplayMessage('');
   };
 
   const incorrectLetters = guessedLetters.filter(
@@ -87,6 +89,27 @@ function App() {
     }
   }, [guessWord])
 
+  useEffect(() => {
+    
+    let message = '';
+    if (isWinner) {
+      message = 'You won!';
+    } else if (isLoser) {
+      message = 'You lost!';
+    }
+
+    let i = 0;
+    const timer = setInterval(() => {
+      if (i < message.length) {
+        setDisplayMessage((prevMessage) => prevMessage + message[i]);
+        i++;
+      } else {
+        clearInterval(timer);
+      }
+    }, 100); 
+
+    return () => clearInterval(timer); 
+  }, [isWinner, isLoser]);
 
   return (
     <>
@@ -104,6 +127,7 @@ function App() {
         </div>
         <div className='keyboard-container'>
           <GameWords 
+            displayMessage={displayMessage}
             reveal={isLoser}
             guessWord={guessWord}
             guessedLetters={guessedLetters}
