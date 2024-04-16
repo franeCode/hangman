@@ -206,37 +206,25 @@ body {
   animation: drawRightArm 1s ease-out forwards;
 }
 
-/* .right-arm {
-  width: 5.5rem;
-  height: 0.4rem;
-  background-color: #E8E8E8;
-  border-top-right-radius: 50%;
-  border-top-left-radius: 50%;
-  position: absolute;
-  top: 7.2rem;
-  right: -5.7rem;
-  transform: rotate(60deg);
-  transform-origin: left bottom;
-  animation: drawRightArm 0.5s ease forwards;
-} */
-
-
 .left-arm {
-  width: 5.5rem;
-  height: 0.4rem;
+  width: 0.6rem;
+  height: 0;
   background-color: #E8E8E8;
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
   position: absolute;
-  top: 7.2rem;
+  top: 7.2rem; 
   right: 0.7rem;
   transform: rotate(-75deg);
-  transform-origin: right bottom;
+  transform-origin: right top;
+  animation: drawLeftArm 1s ease-out forwards;
 }
 
 .right-leg {
-  width: 6rem;
-  height: 0.4rem;
+  width: 0.6rem;
+  height: 0;
   background-color: #E8E8E8;
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
@@ -245,11 +233,12 @@ body {
   right: -6.2rem;
   transform: rotate(65deg);
   transform-origin: left top;
+  animation: drawRightLeg 1s ease-out forwards;
 }
 
 .left-leg {
-  width: 6rem;
-  height: 0.4rem;
+  width: 0.6rem;
+  height: 0;
   background-color: #E8E8E8;
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
@@ -258,6 +247,7 @@ body {
   right: 0.7rem;
   transform: rotate(-85deg);
   transform-origin: right top;
+  animation: drawLeftLeg 1s ease-out forwards;
 }
 
 /* Words */
@@ -279,8 +269,6 @@ body {
 } */
 
 .letters {
-  position: relative;
-  /* font-family: 'Chalkduster', 'Comic Sans MS', cursive;  */
   color: white;
   margin: 0 5px;
 }
@@ -382,5 +370,38 @@ body {
   100% {
     width: 5.5rem; 
     right: -5.8rem; 
+  }
+}
+
+@keyframes drawLeftArm {
+  0% {
+    width: 0; 
+    right: 0.7rem; 
+  }
+  100% {
+    width: 5.5rem; 
+    right: 0.8rem; 
+  }
+}
+
+@keyframes drawRightLeg {
+  0% {
+    width: 0; 
+    right: -0.3rem; 
+  }
+  100% {
+    width: 5.5rem; 
+    right: -5.8rem; 
+  }
+}
+
+@keyframes drawLeftLeg {
+  0% {
+    width: 0; 
+    right: 0.7rem; 
+  }
+  100% {
+    width: 5.5rem; 
+    right: 0.8rem; 
   }
 }
