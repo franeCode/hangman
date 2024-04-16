@@ -166,18 +166,14 @@ body {
 /* Body parts */
 
 .head {
-  width: 2.3rem;
-  height: 2.3rem;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  /* border-top-right-radius: 50%; */
-  border-top-left-radius: 50%;
-  /* border-bottom-right-radius: 50%; */
-  border-bottom-left-radius: 30%;
+  border: 2px solid transparent; /* Start with transparent border */
   position: absolute;
-  top: 3.9rem;
-  right: -2rem;
-  transform: rotate(-45deg);
-  transform-origin: left bottom;
+  top: 50px;
+  left: 50px;
+  animation: drawCircle 2s linear forwards;
 }
 
 .body {
@@ -191,9 +187,26 @@ body {
   position: absolute;
   top: 6.5rem;
   right: 0;
+  animation: drawBody 0.5s ease forwards;
 }
 
 .right-arm {
+  width: 0.6rem;
+  height: 0;
+  background-color: #E8E8E8;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  position: absolute;
+  top: 7.2rem; 
+  right: -0.3rem;
+  transform: rotate(60deg);
+  transform-origin: left top;
+  animation: drawRightArm 1s ease-out forwards;
+}
+
+/* .right-arm {
   width: 5.5rem;
   height: 0.4rem;
   background-color: #E8E8E8;
@@ -204,7 +217,8 @@ body {
   right: -5.7rem;
   transform: rotate(60deg);
   transform-origin: left bottom;
-}
+  animation: drawRightArm 0.5s ease forwards;
+} */
 
 
 .left-arm {
@@ -329,4 +343,44 @@ body {
   width: 100%;
   text-align: center;
   padding: 1rem;
+}
+
+/* Animations */
+
+@keyframes drawCircle {
+  0% {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent; /* Start with transparent borders */
+  }
+  25% {
+    border-top-color: black; /* Draw top border */
+  }
+  50% {
+    border-right-color: black; /* Draw right border */
+  }
+  75% {
+    border-bottom-color: black; /* Draw bottom border */
+  }
+  100% {
+    border-left-color: black; /* Draw left border */
+  }
+}
+
+
+@keyframes drawBody {
+  0% { height: 0; }
+  100% { height: 7rem; }
+}
+
+@keyframes drawRightArm {
+  0% {
+    width: 0; 
+    right: -0.3rem; 
+  }
+  100% {
+    width: 5.5rem; 
+    right: -5.8rem; 
+  }
 }
