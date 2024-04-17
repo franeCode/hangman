@@ -4,14 +4,14 @@ type GameWordsProps = {
     guessWord: string;
     guessedLetters: string[];
     reveal?: boolean;
-    displayMessage?: string;
+    // displayMessage?: string;
   }
   
-export function GameWords({ guessWord, guessedLetters, reveal=false, displayMessage }: GameWordsProps) {
+export function GameWords({ guessWord, guessedLetters, reveal=false }: GameWordsProps) {
  
   return (
       <div className="words text-chalk-effect">
-        {displayMessage && <div className="message">{displayMessage}</div>}
+        {/* {displayMessage && <div className="message">{displayMessage}</div>} */}
         {guessWord.split('').map((letter, index) => (
           <span key={index} className="letters">
             <span 
