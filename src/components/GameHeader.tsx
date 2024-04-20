@@ -12,9 +12,7 @@ export function GameHeader({ isWinner, isLoser, startNewGame, language, handleLa
     return (
         <div className='navbar'>
             <div className='logo'>
-                <h1 className='text-chalk-effect'>Hangman</h1>
-                <img src={logo} style={{ height: "3rem"}} alt="Hangman-logo" />
-                <p className='hand-drawn-line'></p>
+                <h1 className='text-chalk-effect logo-chalk-effect'>Hangman</h1>
             </div>
             <div className='message text-chalk-effect'>
                 {isWinner && "Winner! - Click to try again"}

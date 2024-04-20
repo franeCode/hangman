@@ -16,7 +16,7 @@ export function GameKeyboard({ activeLetters, inactiveLetters, addGuessedLetter,
         <button 
           onClick={() => addGuessedLetter(key)} 
           key={key} 
-          className={`keyboard-key ${isActive ? 'keyboard-key.active' : ""} ${isInactive ? 'keyboard-key.inactive' : ""}`}
+          className={`keyboard-key text-chalk-effect ${isActive ? 'keyboard-key.active' : ""} ${isInactive ? 'keyboard-key.inactive' : ""}`}
           disabled={isInactive || isActive || disabled}
           >
           {key}
