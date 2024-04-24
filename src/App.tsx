@@ -114,9 +114,9 @@ function App() {
   return (
     <>
       <GameHeader 
-        isLoser={isLoser} 
-        isWinner={isWinner} 
-        startNewGame={startNewGame}
+        // isLoser={isLoser} 
+        // isWinner={isWinner} 
+        // startNewGame={startNewGame}
         language={language}
         handleLanguageChange={handleLanguageChange}
         />
@@ -128,6 +128,8 @@ function App() {
         <div className='keyboard-container'>
           <GameWords 
             // displayMessage={displayMessage}
+            isLoser={isLoser} 
+          isWinner={isWinner} 
             reveal={isLoser}
             guessWord={guessWord}
             guessedLetters={guessedLetters}
@@ -140,10 +142,11 @@ function App() {
             inactiveLetters={incorrectLetters}
             addGuessedLetter={addGuessedLetter}
             alphabet={alphabet}
+            startNewGame={startNewGame}
           />
         </div>
-        <Footer />
       </div>
+      <Footer />
     </>
   )
 }
