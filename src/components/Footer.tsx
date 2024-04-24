@@ -1,7 +1,9 @@
 export function Footer() {
     return (
         <>
-            <div className="footer">Footer</div>
+            <footer>
+                <p>&copy; 2024 | Ana Popovic | All rights reserved.</p>
+            </footer>
         </>
     )
 }
