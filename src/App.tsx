@@ -7,6 +7,7 @@ import { GameWords } from './components/GameWords';
 import { GameKeyboard } from './components/GameKeyboard';
 import { GameHeader } from './components/GameHeader';
 import { Footer } from './components/Footer';
+import { GameMessages } from './components/GameMessages';
 
 const englishWordsArray: string[] = (englishWords as { commonWords: string[] }).commonWords;
 const germanWordsArray: string[] = germanWords as string[]; 
@@ -17,13 +18,13 @@ function App() {
   const [language, setLanguage] = useState<'english' | 'german'>('english');
   const [guessWord, setGuessWord] = useState(getRandomWord(language));
   const [alphabet, setAlphabet] = useState('abcdefghijklmnopqrstuvwxyz'.split(''));
-  // const [displayMessage, setDisplayMessage] = useState<string>('');
   
   function getRandomWord(language: 'english' | 'german'): string {
     const words = language === 'german' ? germanWordsArray : englishWordsArray;
     return words[Math.floor(Math.random() * words.length)];
   }
 
+  // Plan to add more languages in the future
   const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const language = event.target.value as 'english' | 'german';
     setLanguage(language);
@@ -35,7 +36,6 @@ function App() {
   const startNewGame = () => {
     setGuessWord(getRandomWord(language));
     setGuessedLetters([]);
-    // setDisplayMessage('');
   };
 
   const incorrectLetters = guessedLetters.filter(
@@ -89,37 +89,14 @@ function App() {
     }
   }, [guessWord])
 
-  // useEffect(() => {
-    
-  //   let message = '';
-  //   if (isWinner) {
-  //     message = 'You won!';
-  //   } else if (isLoser) {
-  //     message = 'You lost!';
-  //   }
-
-  //   let i = 0;
-  //   const timer = setInterval(() => {
-  //     if (i < message.length) {
-  //       setDisplayMessage((prevMessage) => prevMessage + message[i]);
-  //       i++;
-  //     } else {
-  //       clearInterval(timer);
-  //     }
-  //   }, 100); 
-
-  //   return () => clearInterval(timer); 
-  // }, [isWinner, isLoser]);
-
   return (
     <>
       <GameHeader 
-        // isLoser={isLoser} 
-        // isWinner={isWinner} 
-        // startNewGame={startNewGame}
-        // language={language}
-        // handleLanguageChange={handleLanguageChange}
         />
+        <GameMessages
+          isLoser={isLoser}
+          isWinner={isWinner}
+          />
       <div className='game-container'>
         <div className='drawing-container'>
           <GameDrawing 
@@ -127,9 +104,6 @@ function App() {
         </div>
         <div className='keyboard-container'>
           <GameWords 
-            // displayMessage={displayMessage}
-            isLoser={isLoser} 
-            isWinner={isWinner} 
             reveal={isLoser}
             guessWord={guessWord}
             guessedLetters={guessedLetters}
