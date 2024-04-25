@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Walter+Turncoat');
 
 body {
-  background: #274C43; 
-  background: 
+  background: #274C43;
+  background:
     url('./assets/img/black-linen.png'),
     linear-gradient(90deg, #274C43 10%, #274C43 90%);
   font-family: 'Walter Turncoat', cursive;
   color: #E8E8E8;
   height: 100vh;
   overflow: hidden;
-  /* text-shadow: 0px 0px 1px #fff, 0px 0px 2px #fff, 0px 0px 3px #fff, 0px 0px 4px #fff, 0px 0px 5px #fff; */
 }
 
 .game-container {
@@ -33,7 +32,7 @@ body {
 .drawing-container {
   display: flex;
   align-items: center;
-  justify-content:start;
+  justify-content: start;
   width: 100%;
   padding-left: 2rem;
   margin-top: 2rem;
@@ -42,27 +41,27 @@ body {
 /* Chalk Effect */
 
 .chalk-effect {
-    box-shadow: 
-              0 0 1px 1px #E8E8E8,
-              0 0 2px 2px #E8E8E8,
-              0 0 3px 3px #E8E8E8,
-              0 0 4px 4px #E8E8E8;
+  box-shadow:
+    0 0 1px 1px #E8E8E8,
+    0 0 2px 2px #E8E8E8,
+    0 0 3px 3px #E8E8E8,
+    0 0 4px 4px #E8E8E8;
 }
 
 .key-chalk-effect {
-  box-shadow: 
-            0 0 1px 1px #E8E8E8,
-            0 0 2px 2px #E8E8E8,
-            0 0 3px 1px #E8E8E8,
-            0 0 6px 1px #E8E8E8;
+  box-shadow:
+    0 0 1px 1px #E8E8E8,
+    0 0 2px 2px #E8E8E8,
+    0 0 3px 1px #E8E8E8,
+    0 0 6px 1px #E8E8E8;
 }
 
 .text-chalk-effect {
-    text-shadow: 
-      0 0 0px #E8E8E8,
-      0 0 1px #E8E8E8,
-      0 0 2px #E8E8E8,
-      0 0 3px #E8E8E8;
+  text-shadow:
+    0 0 0px #E8E8E8,
+    0 0 1px #E8E8E8,
+    0 0 2px #E8E8E8,
+    0 0 3px #E8E8E8;
 }
 
 .red {
@@ -72,19 +71,6 @@ body {
 .white {
   color: white;
 }
-/* .hand-drawn-line {
-  width: 100%;
-  height: 1px;
-  background-color: #fff;
-  transform: skewY(-6deg) rotateZ(-1deg); 
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  position: absolute;
-  top: 3.5rem;
-  left: 1.3rem; 
-} */
 
 .navbar {
   display: flex;
@@ -97,34 +83,12 @@ body {
   font-size: 3em;
 }
 
-/* .logo {
-  position: relative;
-  padding: 0.5rem;
-}
-
-.logo img {
-  position: absolute;
-  top: 1.5rem;
-  left: -1.3rem;
-  width: 1.8rem;
-} */
-
 /* .languages {
   padding: 0.5rem;
   background-color: white;
   border: none;
   font-family: 'Walter Turncoat', cursive;
   color: #274C43;
-} */
-
-/* .reset-game {
-  padding: 0.5rem;
-  background-color: transparent;
-  border: 0.1rem solid white;
-  border-radius: 50%;
-  font-family: 'Walter Turncoat', cursive;
-  color: #E8E8E8;
-
 } */
 
 .reset {
@@ -147,16 +111,16 @@ body {
   width: 100%;
   position: absolute;
   top: -2rem;
-  /* left: 5.5rem; */
-  font-size: 1.5rem;
+  left: 70%;
+  font-size: 2rem;
   /* margin-bottom: 1rem; */
   color: #E8E8E8;
   margin: 0 auto;
 }
 
-#cr { 
-  filter: drop-shadow(0.5px 1px 1px #E8E8E8); 
-} 
+#cr {
+  filter: drop-shadow(0.5px 1px 1px #E8E8E8);
+}
 
 /* Drawing */
 
@@ -215,10 +179,10 @@ body {
   fill: none;
   stroke: #c7c4c4;
   stroke-width: 2;
-  stroke-dasharray: 255; 
-  stroke-dashoffset: 255; 
+  stroke-dasharray: 255;
+  stroke-dashoffset: 255;
   animation: drawCircle 2s forwards;
-  box-shadow: 
+  box-shadow:
     0 0 1px 1px #E8E8E8,
     0 0 2px 2px #E8E8E8,
     0 0 3px 3px #E8E8E8,
@@ -249,7 +213,7 @@ body {
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
   position: absolute;
-  top: 7.2rem; 
+  top: 7.2rem;
   right: -0.3rem;
   transform: rotate(60deg);
   transform-origin: left top;
@@ -265,7 +229,7 @@ body {
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
   position: absolute;
-  top: 7.2rem; 
+  top: 7.2rem;
   right: 0.7rem;
   transform: rotate(-75deg);
   transform-origin: right top;
@@ -312,7 +276,7 @@ body {
   font-size: 3em;
   text-transform: uppercase;
   gap: 0.3em;
-  color:rgba(255,255,255,0.7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .letters {
@@ -329,11 +293,11 @@ body {
   width: 100%;
   height: 2px;
   background: white;
-  box-shadow: 
-      /* 0 0 1px 1px #E8E8E8, */
-      0 0 1px 1px #E8E8E8,
-      0 0 2px 2px #E8E8E8,
-      0 0 3px 3px #E8E8E8;
+  box-shadow:
+    /* 0 0 1px 1px #E8E8E8, */
+    0 0 1px 1px #E8E8E8,
+    0 0 2px 2px #E8E8E8,
+    0 0 3px 3px #E8E8E8;
 }
 
 /* Keyboard */
@@ -381,398 +345,462 @@ footer {
 
 /* Animations */
 
-/* @keyframes drawHead {
-  from {
-    stroke-dashoffset: 1000;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-} */
-
-
 @keyframes drawCircle {
   to {
-    stroke-dashoffset: 0; 
+    stroke-dashoffset: 0;
   }
 }
 
 
 @keyframes drawBody {
-  0% { height: 0; }
-  100% { height: 7rem; }
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 7rem;
+  }
 }
 
 @keyframes drawRightArm {
   0% {
-    width: 0; 
-    right: -0.3rem; 
+    width: 0;
+    right: -0.3rem;
   }
+
   100% {
-    width: 5.5rem; 
-    right: -5.8rem; 
+    width: 5.5rem;
+    right: -5.8rem;
   }
 }
 
 @keyframes drawLeftArm {
   0% {
-    width: 0; 
-    right: 0.7rem; 
+    width: 0;
+    right: 0.7rem;
   }
+
   100% {
-    width: 5.5rem; 
-    right: 0.8rem; 
+    width: 5.5rem;
+    right: 0.8rem;
   }
 }
 
 @keyframes drawRightLeg {
   0% {
-    width: 0; 
-    right: -0.3rem; 
+    width: 0;
+    right: -0.3rem;
   }
+
   100% {
-    width: 5.5rem; 
-    right: -5.8rem; 
+    width: 5.5rem;
+    right: -5.8rem;
   }
 }
 
 @keyframes drawLeftLeg {
   0% {
-    width: 0; 
-    right: 0.7rem; 
+    width: 0;
+    right: 0.7rem;
   }
+
   100% {
-    width: 5.5rem; 
-    right: 0.8rem; 
+    width: 5.5rem;
+    right: 0.8rem;
   }
 }
 
 /* Media Queries */
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 767px) and (max-width: 1024px) {
   .game-container {
-    flex-direction: column;
-    padding: 0 0 0 0;
+    flex-wrap: wrap;
+    padding: 1.5rem 0 0 0;
+    gap: 2rem;
+  }
+
+  .drawing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 
   .keyboard-container {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%; */
     padding-right: 0rem;
     margin-bottom: 0rem;
   }
 
   /* Drawing */
 
-/* Base */
+  /* Base */
 
-.bottom-horizontal {
-  width: 7rem;
-  height: 0.1rem;
-  margin-left: 4rem;
-  /* background-color: #E8E8E8;
-  border-top-left-radius: 65%;
-  border-top-right-radius: 65%; */
-}
+  .bottom-horizontal {
+    width: 10rem;
+    height: 0.2rem;
+    margin-left: 2.4rem;
+  }
 
-.big-vertical {
-  width: 0.1rem;
-  height: 12rem;
-  /* background-color: #E8E8E8;
-  margin-left: 7.5rem; */
-}
+  .big-vertical {
+    width: 0.1rem;
+    height: 17rem;
+  }
 
-.top-horizontal {
-  width: 8rem;
-  height: 0.1rem;
-  background-color: #E8E8E8;
-  margin-left: 5.5rem;
-}
+  .top-horizontal {
+    width: 11rem;
+    height: 0.2rem;
+    background-color: #E8E8E8;
+    margin-left: 5.5rem;
+  }
 
-.diagonal {
-  width: 0.1rem;
-  height: 2rem;
-  /* background-color: #E8E8E8; */
-  /* position: absolute; */
-  top: -0.3rem;
-  right: 5.6rem;
-  /* transform: rotate(45deg);
-  transform-origin: left bottom; */
-}
+  .diagonal {
+    width: 0.2rem;
+    height: 3rem;
+    top: -0.5rem;
+    right: 8.6rem;
+  }
 
-.small-vertical {
-  width: 0.1rem;
-  height: 1.2rem;
-  /* background-color: #E8E8E8;
-  position: absolute;
-  top: 0;
-  right: 0; */
-}
+  .small-vertical {
+    width: 0.1rem;
+    height: 1.7rem;
+  }
 
-/* Body parts */
+  .body {
+    width: 0.1rem;
+    height: 2rem;
+    top: 4.8rem;
+    right: 0;
+  }
 
-/* .circle-svg {
-  width: 100%;
-  height: 100%;
-} */
+  .right-arm {
+    width: 0.1rem;
+    top: 5.5rem;
+  }
 
-/* .circle-path {
-  fill: none;
-  stroke: #c7c4c4;
-  stroke-width: 2;
-  stroke-dasharray: 255; 
-  stroke-dashoffset: 255; 
-  animation: drawCircle 2s forwards;
-  box-shadow: 
-    0 0 1px 1px #E8E8E8,
-    0 0 2px 2px #E8E8E8,
-    0 0 3px 3px #E8E8E8,
-    0 0 4px 4px #E8E8E8;
-} */
+  .left-arm {
+    width: 0.1rem;
+    height: 0;
+    top: 5.5rem;
+    right: 0.5rem;
+  }
+
+  .right-leg {
+    width: 0.1rem;
+    top: 9.3rem;
+  }
+
+  .left-leg {
+    width: 0.1rem;
+    top: 9.3rem;
+    right: 0.5rem;
+  }
+
+  /* Animation */
+
+  @keyframes drawCircle {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
 
 
-.body {
-  width: 0.1rem;
-  height: 2rem;
-  /* background-color: #E8E8E8;
-  border-top-right-radius: 50%;
-  border-top-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-  position: absolute; */
-  top: 3.5rem;
-  right: 0;
-  /* animation: drawBody 0.5s ease forwards; */
-}
+  @keyframes drawBody {
+    0% {
+      height: 0;
+    }
 
-.right-arm {
-  width: 0.1rem;
-  /* height: 0;
-  background-color: #E8E8E8;
-  border-top-right-radius: 50%;
-  border-top-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-  position: absolute; */
-  top: 4.2rem; 
-  /* right: -0.3rem;
-  transform: rotate(60deg);
-  transform-origin: left top;
-  animation: drawRightArm 1s ease-out forwards; */
-}
+    100% {
+      height: 4.5rem;
+    }
+  }
 
-.left-arm {
-  width: 0.1rem;
-  height: 0;
-  /* background-color: #E8E8E8;
-  border-top-right-radius: 50%;
-  border-top-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-  position: absolute; */
-  top: 4.2rem; 
-  right: 0.5rem;
-  /* transform: rotate(-75deg);
-  transform-origin: right top;
-  animation: drawLeftArm 1s ease-out forwards; */
-}
+  @keyframes drawRightArm {
+    0% {
+      width: 0;
+      right: -0.3rem;
+    }
 
-.right-leg {
-  width: 0.1rem;
-  /* height: 0;
-  background-color: #E8E8E8;
-  border-top-right-radius: 50%;
-  border-top-left-radius: 50%;
-  position: absolute; */
-  top: 7.3rem;
-  /* right: -6.2rem;
-  transform: rotate(65deg);
-  transform-origin: left top;
-  animation: drawRightLeg 1s ease-out forwards; */
-}
+    100% {
+      width: 3rem;
+      right: -3.2rem;
+    }
+  }
 
-.left-leg {
-  width: 0.1rem;
-  /* height: 0;
-  background-color: #E8E8E8;
-  border-top-right-radius: 50%;
-  border-top-left-radius: 50%;
-  position: absolute; */
-  top: 7.3rem;
-  right: 0.5rem;
-  /* transform: rotate(-85deg);
-  transform-origin: right top;
-  animation: drawLeftLeg 1s ease-out forwards; */
-}
+  @keyframes drawLeftArm {
+    0% {
+      width: 0;
+      right: 0.7rem;
+    }
 
-/* Animation */
+    100% {
+      width: 3rem;
+      right: 0.4rem;
+    }
+  }
 
-@keyframes drawCircle {
-  to {
-    stroke-dashoffset: 0; 
+  @keyframes drawRightLeg {
+    0% {
+      width: 0;
+      right: -0.3rem;
+    }
+
+    100% {
+      width: 3rem;
+      right: -3.2rem;
+    }
+  }
+
+  @keyframes drawLeftLeg {
+    0% {
+      width: 0;
+      right: 0.7rem;
+    }
+
+    100% {
+      width: 3rem;
+      right: 0.3rem;
+    }
+  }
+
+  /* Words */
+
+  .words {
+    margin: 2rem 0 0 0;
+    font-size: 2.3em;
+  }
+
+  .keyboard {
+    grid-template-columns: repeat(auto-fill, minmax(2.5rem, 1fr));
+    width: 80%;
+    padding-top: 2rem;
+  }
+
+  .keyboard-key {
+    font-size: 1.5em;
+  }
+
+  .header {
+    font-size: 2.5em;
+  }
+
+  .reset {
+    padding: 0.2rem 0.8rem;
+    font-size: 1.5em;
+  }
+
+  /* Win / Lose message */
+
+  .message-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .message {
+    top: -26rem;
+    left: 18rem;
+    font-size: 1.5rem;
+  }
+
+
+  footer {
+    position: absolute;
+    bottom: 0.2rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
   }
 }
 
-
-@keyframes drawBody {
-  0% { height: 0; }
-  100% { height: 4rem; }
-}
-
-@keyframes drawRightArm {
-  0% {
-    width: 0; 
-    right: -0.3rem; 
+@media screen and (max-width: 767px) {
+  body {
+    min-height: auto;
   }
-  100% {
-    width: 2.5rem; 
-    right: -2.8rem; 
+
+  .game-container {
+    flex-direction: column;
+    padding: 2rem 1rem 0 1rem;
   }
-}
 
-@keyframes drawLeftArm {
-  0% {
-    width: 0; 
-    right: 0.7rem; 
+  .keyboard-container {
+    padding-right: 0rem;
+    margin-bottom: 0rem;
+    margin-top: 3rem;
   }
-  100% {
-    width: 2.5rem; 
-    right: 0.5rem; 
+
+  /* Drawing */
+
+  /* Base */
+
+  .bottom-horizontal {
+    width: 7rem;
+    height: 0.1rem;
+    margin-left: 4rem;
   }
-}
 
-@keyframes drawRightLeg {
-  0% {
-    width: 0; 
-    right: -0.3rem; 
+  .big-vertical {
+    width: 0.1rem;
+    height: 12rem;
   }
-  100% {
-    width: 2.5rem; 
-    right: -2.8rem; 
+
+  .top-horizontal {
+    width: 8rem;
+    height: 0.1rem;
+    background-color: #E8E8E8;
+    margin-left: 5.5rem;
   }
-}
 
-@keyframes drawLeftLeg {
-  0% {
-    width: 0; 
-    right: 0.7rem; 
+  .diagonal {
+    width: 0.1rem;
+    height: 2rem;
+    top: -0.3rem;
+    right: 5.6rem;
   }
-  100% {
-    width: 2.5rem; 
-    right: 0.5rem; 
+
+  .small-vertical {
+    width: 0.1rem;
+    height: 1.2rem;
   }
-}
 
-/* Words */
+  .body {
+    width: 0.1rem;
+    height: 2rem;
+    top: 3.5rem;
+    right: 0;
+  }
 
-.words {
-  /* display: flex;
-  flex-direction: column;
-  width: 90%;
-  justify-content: center;
-  align-items: center; */
-  margin: 1rem 0 0 0;
-  font-size: 2em;
-  /* text-transform: uppercase;
-  gap: 0.3em;
-  color:rgba(255,255,255,0.7); */
-}
+  .right-arm {
+    width: 0.1rem;
+    top: 4.2rem;
+  }
 
-/* .letters {
-  color: white;
-  margin: 0 5px;
-  border-bottom: 0.1em solid white;
-}
+  .left-arm {
+    width: 0.1rem;
+    height: 0;
+    top: 4.2rem;
+    right: 0.5rem;
+  }
 
-.letters::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 100%;
-  height: 2px;
-  background: white;
-  box-shadow: 
-      0 0 1px 1px #E8E8E8,
-      0 0 2px 2px #E8E8E8,
-      0 0 3px 3px #E8E8E8;
-} */
+  .right-leg {
+    width: 0.1rem;
+    top: 7.3rem;
+  }
 
-/* Keyboard */
+  .left-leg {
+    width: 0.1rem;
+    top: 7.3rem;
+    right: 0.5rem;
+  }
 
-.keyboard {
-  /* display: grid; */
-  grid-template-columns: repeat(auto-fill, minmax(2rem, 1fr));
-  /* gap: 0.9rem; */
-  width: 90%;
-  /* margin-bottom: 3rem; */
-}
+  /* Animation */
 
-.keyboard-key {
-  display: inline-block;
-  border: 0.1rem solid rgb(144, 142, 142);
-  background-color: transparent;
-  aspect-ratio: 1 / 1;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1em;
-  cursor: pointer;
-  font-family: 'Walter Turncoat', cursive;
-}
-
-/* .keyboard-key.active {
-  background-color: hsl(200, 100%, 50%);
-  color: white;
-} */
-
-/* .keyboard-key.inactive {
-  opacity: .3;
-}
-
-.keyboard-key:hover:not(:disabled),
-.keyboard-key:focus:not(:disabled) {
-  background-color: hsl(200, 100%, 75%);
-} */
-.header {
-  font-size: 2em;
-}
-
-.reset {
-  padding: 0.2rem 0.8rem;
-  font-size: 1em;
-  margin: auto;
-  background-color: transparent;
-  border: 0.1rem solid white;
-  font-family: 'Walter Turncoat', cursive;
-  color: #E8E8E8;
-}
-
-/* Win / Lose message */
-.message-container {
-  position: relative;
-  width: 100%;
-}
-
-.message {
-  /* width: 100%;
-  position: absolute; */
-  top: -16rem;
-  left: 7.5rem;
-  font-size: 1rem;
-  /* margin-bottom: 1rem; */
-  /* color: #E8E8E8;
-  margin: 0 auto; */
-}
+  @keyframes drawCircle {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
 
 
-footer {
-  position: fixed;
-  bottom: 1.8rem;
-  width: 100%;
-  text-align: center;
-  font-size: 0.8em;
-}
+  @keyframes drawBody {
+    0% {
+      height: 0;
+    }
+
+    100% {
+      height: 4rem;
+    }
+  }
+
+  @keyframes drawRightArm {
+    0% {
+      width: 0;
+      right: -0.3rem;
+    }
+
+    100% {
+      width: 2.5rem;
+      right: -2.8rem;
+    }
+  }
+
+  @keyframes drawLeftArm {
+    0% {
+      width: 0;
+      right: 0.7rem;
+    }
+
+    100% {
+      width: 2.5rem;
+      right: 0.5rem;
+    }
+  }
+
+  @keyframes drawRightLeg {
+    0% {
+      width: 0;
+      right: -0.3rem;
+    }
+
+    100% {
+      width: 2.5rem;
+      right: -2.8rem;
+    }
+  }
+
+  @keyframes drawLeftLeg {
+    0% {
+      width: 0;
+      right: 0.7rem;
+    }
+
+    100% {
+      width: 2.5rem;
+      right: 0.4rem;
+    }
+  }
+
+  /* Words */
+
+  .words {
+    margin: 1rem 0 0 0;
+    font-size: 2em;
+  }
+
+  .keyboard {
+    grid-template-columns: repeat(auto-fill, minmax(2rem, 1fr));
+    width: 90%;
+  }
+
+  .keyboard-key {
+    font-size: 1em;
+  }
+
+  .header {
+    font-size: 2em;
+  }
+
+  .reset {
+    padding: 0.2rem 0.8rem;
+    font-size: 1em;
+  }
+
+  /* Win / Lose message */
+  .message-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .message {
+    top: -1rem;
+    left: 10rem;
+    font-size: 1.3rem;
+  }
+
+
+  footer {
+    position: absolute;
+    bottom: 0rem;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+  }
 }
