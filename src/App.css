@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Walter+Turncoat');
 
+/* @media screen and (min-width: 1200px) { */
 body {
   background: #274C43;
   background:
     url('./assets/img/black-linen.png'),
-    linear-gradient(90deg, #274C43 10%, #274C43 90%);
+    linear-gradient(90deg, #274C43 10%, #274C43 90%); 
+  background-size: cover;
   font-family: 'Walter Turncoat', cursive;
   color: #E8E8E8;
   height: 100vh;
@@ -16,7 +18,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  padding: 2rem 4rem 0 7rem;
+  padding: 6rem 4rem 0 7rem;
 }
 
 .keyboard-container {
@@ -92,8 +94,8 @@ body {
 } */
 
 .reset {
-  padding: 0.8rem 1.8rem;
-  font-size: 1.3em;
+  padding: 0.4rem 1rem;
+  font-size: 1.5em;
   margin: auto;
   background-color: transparent;
   border: 0.1rem solid white;
@@ -110,12 +112,13 @@ body {
 .message {
   width: 100%;
   position: absolute;
-  top: -2rem;
-  left: 70%;
-  font-size: 2rem;
+  /* top: 3%; */
+  left: 68%;
+  font-size: 3rem;
   /* margin-bottom: 1rem; */
   color: #E8E8E8;
   margin: 0 auto;
+  /* transform: rotate(90deg); */
 }
 
 #cr {
@@ -410,12 +413,13 @@ footer {
   }
 }
 
+
 /* Media Queries */
 
 @media screen and (min-width: 767px) and (max-width: 1024px) {
   .game-container {
     flex-wrap: wrap;
-    padding: 1.5rem 0 0 0;
+    padding: 6rem 0 0 0;
     gap: 2rem;
   }
 
@@ -596,9 +600,9 @@ footer {
   }
 
   .message {
-    top: -26rem;
-    left: 18rem;
-    font-size: 1.5rem;
+    top: 10%;
+    left: 45%;
+    font-size: 2.5rem;
   }
 
 
