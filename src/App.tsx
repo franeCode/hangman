@@ -117,8 +117,8 @@ function App() {
         // isLoser={isLoser} 
         // isWinner={isWinner} 
         // startNewGame={startNewGame}
-        language={language}
-        handleLanguageChange={handleLanguageChange}
+        // language={language}
+        // handleLanguageChange={handleLanguageChange}
         />
       <div className='game-container'>
         <div className='drawing-container'>
@@ -129,12 +129,14 @@ function App() {
           <GameWords 
             // displayMessage={displayMessage}
             isLoser={isLoser} 
-          isWinner={isWinner} 
+            isWinner={isWinner} 
             reveal={isLoser}
             guessWord={guessWord}
             guessedLetters={guessedLetters}
           /> 
           <GameKeyboard
+            isLoser={isLoser} 
+            isWinner={isWinner}
             disabled={isWinner || isLoser}
             activeLetters={guessedLetters.filter(letter =>
             guessWord.includes(letter)
