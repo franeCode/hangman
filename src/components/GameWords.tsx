@@ -15,7 +15,7 @@ export function GameWords({ isWinner, isLoser, guessWord, guessedLetters, reveal
       <div className="words text-chalk-effect">
         <div className='message-container'>
             {isWinner && <p className="message text-chalk-effect">Winner!</p>}
-            {isLoser && <p className="message text-chalk-effect">Nice Try - Click to try again</p>}
+            {isLoser && <p className="message text-chalk-effect">Looser!</p>}
         </div>
         <div>
         {guessWord.split('').map((letter, index) => (
