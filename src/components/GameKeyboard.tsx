@@ -5,9 +5,11 @@ type GameKeyboardProps = {
     disabled?: boolean
     alphabet: string[]
     startNewGame: () => void;
+    isWinner: boolean;
+    isLoser: boolean;
 };
 
-export function GameKeyboard({ activeLetters, inactiveLetters, addGuessedLetter, startNewGame, disabled=false, alphabet }: GameKeyboardProps) {
+export function GameKeyboard({ activeLetters, inactiveLetters, isWinner, isLoser, addGuessedLetter, startNewGame, disabled=false, alphabet }: GameKeyboardProps) {
   return (
     <div className='keyboard'>
       {alphabet.map((key) => {
@@ -23,7 +25,7 @@ export function GameKeyboard({ activeLetters, inactiveLetters, addGuessedLetter,
           {key}
         </button>
       )})}
-      <button onClick={startNewGame} className="key-chalk-effect reset text-chalk-effect">RESET</button>
+      <button onClick={startNewGame} className="key-chalk-effect reset text-chalk-effect" style={{ color: isWinner || isLoser ? 'red' : 'white' }}>RESET</button>
     </div>
   );
 }
