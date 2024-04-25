@@ -5,8 +5,7 @@ body {
   background: #274C43;
   background:
     url('./assets/img/black-linen.png'),
-    linear-gradient(90deg, #274C43 10%, #274C43 90%); 
-  background-size: cover;
+    linear-gradient(90deg, #274C43 10%, #274C43 90%);
   font-family: 'Walter Turncoat', cursive;
   color: #E8E8E8;
   height: 100vh;
