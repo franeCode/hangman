@@ -1,5 +1,5 @@
 import './App.css'
-import React, { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import englishWords from './english_words.json'
 import { GameDrawing } from './components/GameDrawing';
 import { GameWords } from './components/GameWords';
@@ -14,7 +14,6 @@ function App() {
   
   const [guessedLetters, setGuessedLetters] = useState<string[]>([])
   const [guessWord, setGuessWord] = useState(getRandomWord());
-  const [alphabet, setAlphabet] = useState(['abcdefghijklmnopqrstuvwxyz'.split('')]);
 
   function getRandomWord(): string {
     return englishWordsArray[Math.floor(Math.random() * englishWordsArray.length)];
@@ -23,7 +22,6 @@ function App() {
   const startNewGame = () => {
     setGuessWord(getRandomWord());
     setGuessedLetters([]);
-    setAlphabet(alphabet);
   };
 
   const incorrectLetters = guessedLetters.filter(
@@ -97,7 +95,6 @@ function App() {
             guessedLetters={guessedLetters}
           /> 
           <GameKeyboard
-            alphabet={alphabet[0]} 
             isLoser={isLoser} 
             isWinner={isWinner}
             disabled={isWinner || isLoser}

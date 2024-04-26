@@ -3,13 +3,15 @@ type GameKeyboardProps = {
     inactiveLetters: string[]
     addGuessedLetter: (letter: string) => void
     disabled?: boolean
-    alphabet: string[]
     startNewGame: () => void;
     isWinner: boolean;
     isLoser: boolean;
 };
 
-export function GameKeyboard({ activeLetters, inactiveLetters, isWinner, isLoser, addGuessedLetter, startNewGame, disabled=false, alphabet }: GameKeyboardProps) {
+export function GameKeyboard({ activeLetters, inactiveLetters, isWinner, isLoser, addGuessedLetter, startNewGame, disabled=false}: GameKeyboardProps) {
+  
+  const alphabet = "abcdefghijklmnopqrstuvwxyz".split('')
+
   return (
     <div className='keyboard'>
       {alphabet.map((key) => {
