@@ -25,13 +25,13 @@ function App() {
   }
 
   // Plan to add more languages in the future
-  const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const language = event.target.value as 'english' | 'german';
-    setLanguage(language);
-    setGuessWord(getRandomWord(language));
-    setAlphabet(language === 'german' ? 'abcdefghijklmnopqrstuvwxyzäöüß'.split('') : 'abcdefghijklmnopqrstuvwxyz'.split('')); 
-    setGuessedLetters([]);
-  };
+  // const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+  //   const language = event.target.value as 'english' | 'german';
+  //   setLanguage(language);
+  //   setGuessWord(getRandomWord(language));
+  //   setAlphabet(language === 'german' ? 'abcdefghijklmnopqrstuvwxyzäöüß'.split('') : 'abcdefghijklmnopqrstuvwxyz'.split('')); 
+  //   setGuessedLetters([]);
+  // };
 
   const startNewGame = () => {
     setGuessWord(getRandomWord(language));
