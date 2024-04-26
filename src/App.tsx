@@ -1,7 +1,6 @@
 import './App.css'
 import React, { useState, useCallback, useEffect } from 'react'
 import englishWords from './english_words.json'
-import germanWords from './german_words.json';
 import { GameDrawing } from './components/GameDrawing';
 import { GameWords } from './components/GameWords';
 import { GameKeyboard } from './components/GameKeyboard';
@@ -10,32 +9,21 @@ import { Footer } from './components/Footer';
 import { GameMessages } from './components/GameMessages';
 
 const englishWordsArray: string[] = (englishWords as { commonWords: string[] }).commonWords;
-const germanWordsArray: string[] = germanWords as string[]; 
 
 function App() {
   
   const [guessedLetters, setGuessedLetters] = useState<string[]>([])
-  const [language, setLanguage] = useState<'english' | 'german'>('english');
-  const [guessWord, setGuessWord] = useState(getRandomWord(language));
-  const [alphabet, setAlphabet] = useState('abcdefghijklmnopqrstuvwxyz'.split(''));
-  
-  function getRandomWord(language: 'english' | 'german'): string {
-    const words = language === 'german' ? germanWordsArray : englishWordsArray;
-    return words[Math.floor(Math.random() * words.length)];
+  const [guessWord, setGuessWord] = useState(getRandomWord());
+  const [alphabet, setAlphabet] = useState(['abcdefghijklmnopqrstuvwxyz'.split('')]);
+
+  function getRandomWord(): string {
+    return englishWordsArray[Math.floor(Math.random() * englishWordsArray.length)];
   }
 
-  // Plan to add more languages in the future
-  // const handleLanguageChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-  //   const language = event.target.value as 'english' | 'german';
-  //   setLanguage(language);
-  //   setGuessWord(getRandomWord(language));
-  //   setAlphabet(language === 'german' ? 'abcdefghijklmnopqrstuvwxyzäöüß'.split('') : 'abcdefghijklmnopqrstuvwxyz'.split('')); 
-  //   setGuessedLetters([]);
-  // };
-
   const startNewGame = () => {
-    setGuessWord(getRandomWord(language));
+    setGuessWord(getRandomWord());
     setGuessedLetters([]);
+    setAlphabet(alphabet);
   };
 
   const incorrectLetters = guessedLetters.filter(
@@ -79,7 +67,7 @@ function App() {
 
       e.preventDefault()
       setGuessedLetters([])
-      setGuessWord(guessWord)
+      setGuessWord(getRandomWord())
     }
 
     document.addEventListener("keypress", handler)
@@ -87,20 +75,20 @@ function App() {
     return () => {
       document.removeEventListener("keypress", handler)
     }
-  }, [guessWord])
+  }, [])
 
   return (
     <>
-      <GameHeader 
-        />
-        <GameMessages
-          isLoser={isLoser}
-          isWinner={isWinner}
-          />
+      <GameHeader />
+      <GameMessages
+        isLoser={isLoser}
+        isWinner={isWinner}
+      />
       <div className='game-container'>
         <div className='drawing-container'>
           <GameDrawing 
-            numberOfGuessedLetters={incorrectLetters.length} />
+            numberOfGuessedLetters={incorrectLetters.length} 
+          />
         </div>
         <div className='keyboard-container'>
           <GameWords 
@@ -109,15 +97,15 @@ function App() {
             guessedLetters={guessedLetters}
           /> 
           <GameKeyboard
+            alphabet={alphabet[0]} 
             isLoser={isLoser} 
             isWinner={isWinner}
             disabled={isWinner || isLoser}
             activeLetters={guessedLetters.filter(letter =>
-            guessWord.includes(letter)
+              guessWord.includes(letter)
             )}
             inactiveLetters={incorrectLetters}
             addGuessedLetter={addGuessedLetter}
-            alphabet={alphabet}
             startNewGame={startNewGame}
           />
         </div>
