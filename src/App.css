@@ -102,6 +102,7 @@ body {
   border: 0.1rem solid white;
   font-family: 'Walter Turncoat', cursive;
   color: #E8E8E8;
+  cursor: pointer;
 }
 
 /* Win / Lose message */
