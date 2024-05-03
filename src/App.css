@@ -655,12 +655,14 @@ footer {
   .keyboard-container {
     padding-right: 0rem;
     margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     /* padding-bottom: 2rem; */
   }
 
   .drawing-container {
     padding-left: 0;
+    justify-content: start;
+    margin-left: 3rem;
 
   }
 
@@ -812,7 +814,7 @@ footer {
 
   .words {
     margin: 0 0 0 0;
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .keyboard {
@@ -822,6 +824,7 @@ footer {
 
   .keyboard-key {
     font-size: 1em;
+    aspect-ratio: 1 / 1;
   }
 
   .header {
