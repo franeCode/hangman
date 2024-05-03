@@ -648,6 +648,8 @@ footer {
   .game-container {
     flex-direction: column;
     padding: 1rem 1rem 0 1rem;
+    margin-left: 0;
+    margin-bottom: 3rem;
   }
 
   .keyboard-container {
@@ -659,6 +661,7 @@ footer {
 
   .drawing-container {
     padding-left: 0;
+
   }
 
   /* Drawing */
