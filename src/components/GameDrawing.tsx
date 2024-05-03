@@ -1,9 +1,9 @@
 import React from 'react';
 
 const HEAD = (
-    <div className="">
+    <div className='head'>
         <svg className="circle-svg" viewBox="0 0 100 100" style={{ position: 'absolute', top: '19%', left: '99%', transform: 'translate(-50%, -50%)' }}>
-        <circle id="cr" className="circle-path" cx="50" cy="50" r="8"/>
+        <circle className="circle-path" cx="50" cy="50" r="8"/>
       </svg>
     </div>
 )
