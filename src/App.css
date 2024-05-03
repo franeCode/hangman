@@ -17,8 +17,8 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  padding: 4rem 5rem 2rem 6rem;
-  overflow: hidden;
+  /* padding: 4rem 5rem 2rem 6rem; */
+  /* overflow: hidden; */
 }
 
 .keyboard-container {
@@ -35,10 +35,10 @@ body {
 .drawing-container {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   width: 100%;
   padding-left: 5rem;
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
 }
 
 /* Chalk Effect */
@@ -360,7 +360,6 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: center;
-  padding-top: 2rem;
 }
 
 /* Animations */
