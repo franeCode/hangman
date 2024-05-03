@@ -641,7 +641,7 @@ footer {
 
 @media screen and (max-width: 767px) {
   body {
-    min-height: auto;
+    height: 100vh;
   }
 
   .game-container {
