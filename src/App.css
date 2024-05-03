@@ -339,6 +339,7 @@ body {
   font-size: 2rem;
   cursor: pointer;
   font-family: 'Walter Turncoat', cursive;
+  color: white;
 }
 
 .keyboard-key.active {
