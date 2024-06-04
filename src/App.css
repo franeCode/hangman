@@ -17,7 +17,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 .keyboard-container {
