@@ -345,6 +345,12 @@ body {
   opacity: .3;
 }
 
+.keyboard-key:disabled {
+  background-color: hsl(210, 1%, 27%);
+  cursor: not-allowed;
+  color: #b0b0b0;
+}
+
 .keyboard-key:hover:not(:disabled),
 .keyboard-key:focus:not(:disabled) {
   background-color: hsl(200, 100%, 75%);
